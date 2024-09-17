@@ -1,2 +1,2 @@
 # AulaPHP
-primeira aula sobre PHP
+Exercícios sobre PHP
