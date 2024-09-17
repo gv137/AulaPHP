@@ -26,7 +26,7 @@ $v3 = ($_POST['n3']);
 if ($v1 > ($v2 + $v3)) {
     
     echo ("<h1> O valor 1 é maior que a soma dos valores restantes");  
-} elseif ($v1 = ($v2 + $v3)) {
+} elseif ($v1 == ($v2 + $v3)) {
 
     echo ("<h1> O valor 1 é igual a soma dos valores restantes");
 }else {
