@@ -38,28 +38,28 @@
 
       <h1><center>cadastro de funcionários</center></h1>
 
-      <form class="col-md-3">
+      <form class="col-md-3" method="post" action="inserir.php">
         <div class="form-group">
           <label for="exampleInputEmail1">Nome do funcionário</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+          <input type="text" class="form-control" id="nome" aria-describedby="emailHelp" name="nome">
         </div>
         <br>
         <div class="form-group">
           <label for="exampleInputPassword1">Setor do funcionário</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+          <input type="text" class="form-control" id="setor" name="setor">
         </div>
         <br>
         <div class="form-group">
           <label for="exampleInputPassword1">Cargo do funcionário</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+          <input type="text" class="form-control" id="cargo" name="cargo">
         </div>
         <br>
         <div class="form-group">
           <label for="exampleInputPassword1">Salário</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+          <input type="text" class="form-control" id="salario" name="salario">
         </div>
-        <button type="submit" class="btn btn-success">Cadastrar</button>
-        <button type="submit" class="btn btn-danger">Home</button>
+        <a class="btn btn-success" href="inserir.php" type="submit" role="button">Cadastrar</a>
+        <a class="btn btn-danger" href="index.html" role="button">Home</a>
       </form>
 </body>
 
