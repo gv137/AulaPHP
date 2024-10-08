@@ -7,6 +7,7 @@ if ($_POST) {
     $cargo = $_POST['cargo'];
     $salario = $_POST['salario'];
     $sql = "INSERT INTO funcionarios (nome, setor, cargo, salario) VALUES ('$nome', '$setor', '$cargo', '$salario')";
+    echo "oi";
     if ($conexao->query($sql)) {
         echo "cadastrado com sucesso!";
     } else {
