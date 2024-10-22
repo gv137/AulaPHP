@@ -1,7 +1,7 @@
 <?php
 
 $localhost = "localhost";
-$db = "crud";
+$db = "crud1";
 $senha = "";
 $usuario = "root";
 $conexao = new mysqli ($localhost, $usuario, $senha, $db);
