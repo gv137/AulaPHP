@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Alterar funcionários</title>
+</head>
+<body>
+    
+</body>
+
+<table class="table">
+    <tr>
+        <th>Nome</th>
+        <td><input type="text" name="nome" placeholder="Nome" value="<?php echo $data['nome']?>"/></td> 
+    </tr>
+
+    <tr>
+        <th>Setor</th>
+        <td><input type="text" name="setor" placeholder="setor" value="<?php echo $data['setor']?>"/></td> 
+    </tr>
+
+    <tr>
+        <th>Cargo</th>
+        <td><input type="text" name="cargos" placeholder="cargos" value="<?php echo $data['cargo']?>"/></td> 
+    </tr>  
+    
+    <tr>
+        <th>salario</th>
+        <td><input type="text" name="salario" placeholder="salario" value="<?php echo $data['salario']?>"/></td> 
+    </tr>  
+    
+    <tr>
+        <input type="hidden" name="id" value="<?php echo $data['id']?>" />
+
+        <td><button type="submit" class="btn btn-info">Salvar Alterações</button></td>
+    </tr>
+
+</table>
+
+</html>
