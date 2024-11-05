@@ -1,5 +1,5 @@
 <?php
-    require_once'conexao.php';
+    require_once 'conexao.php';
     if ($_GET['id']) {
         $id = $_GET['id'];
         $sql = "SELECT * FROM funcionarios WHERE id = {$id}";
@@ -17,7 +17,7 @@
 <body>
     <fieldset>
         <legend>Alterar funcionarios</legend>
-        <form action="update.php" method="post"></form>
+        <form action="update.php" method="post">
 
         <table class="table">
     <tr>
@@ -32,7 +32,7 @@
 
     <tr>
         <th>Cargo</th>
-        <td><input type="text" name="cargos" placeholder="cargos" value="<?php echo $data['cargo']?>"/></td> 
+        <td><input type="text" name="cargo" placeholder="cargo" value="<?php echo $data['cargo']?>"/></td> 
     </tr>  
     
     <tr>
@@ -47,6 +47,8 @@
     </tr>
 
     </table>
+
+    </form>
 
     </fieldset>
 </body>

@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>pesquisa</title>
+    <title>Excluir funcionário</title>
 </head>
+
+
 
 <body>
 
@@ -34,8 +36,9 @@
           </ul>
         </div>
       </nav>
+      <br><br>
 
-<table class="table table-hover table-dark">
+      <table class="table table-hover table-dark">
 <thead>
     <tr>
       <th scope="col">nome</th>
@@ -47,9 +50,8 @@
 
 <tbody>
 
-
-<?php
-    require_once'conexao.php';
+      <?php
+    require_once 'conexao.php';
 
     $id=$_POST['id'];
 
@@ -68,10 +70,7 @@
             <td>".$dados['cargo']."</td>
             <td>".$dados['salario']."</td>
         
-            <td>
-        
-            <a href='editar.php?id=".$dados['id']."'><button type='button' class='btn btn-success'>Alterar</button></a>
-            </tr>";
+            <td>";
     }
 
 ?>
@@ -79,7 +78,17 @@
 </tbody>
 </table>
 
+    <h3>Tem certeza que deseja excluir esse funcionário ?</h3>
+
+    <form class="form-inline" method="post" action="delete.php">
+
+    <input type="hidden" name="id" value="<?php echo $data['id']?>" />
+
+    <button type="submit" class="btn btn-danger">Excluir</button>
+
+    <a href="index.html"><button type="button" class="btn btn-success">Voltar</button></a>
+
+    </form>
+    
 </body>
 </html>
-
-

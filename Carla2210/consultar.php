@@ -15,14 +15,34 @@
 
 </head>
 <body>
-    
-<form class="form-inline" method="post" action="pesquisarUp.php">
-    <div class="form-group mx-sm-3 mb-2">
-        <label>Digite a matrícula do funcionário: </label>
-        <input type="text" class="form-control" name="id">
-    </div>
-    <button type="submit" class="btn btn-primary mb-2">Pesquisar</button>
-</form>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(Página atual)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cadastrar.html">Cadastrar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="consultar.php">Consultar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="atualizar.php">Atualizar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Excluir</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+
+      <br><br>
 
 <table class="table table-hover table-dark">
 <thead>
@@ -31,6 +51,7 @@
       <th scope="col">setor</th>
       <th scope="col">cargo</th>
       <th scope="col">salario</th>
+      <th scope="col">Opções</th>
     </tr>
 </thead>
 
@@ -53,12 +74,16 @@ while ($row = mysqli_fetch_assoc($sql)) {
 
     <a href='editar.php?id=".$row['id']."'><button type='button' class='btn btn-success'>Alterar</button></a>
 
+    <a href='excluir.html?id=".$row['id']."'><button type='button' class='btn btn-danger'>Excluir</button></a>
+
     </tr>";
 }
 ?>
 
 </tbody>
 </table>
+
+<a href="inserir.php"><button class="btn btn-info">Adicionar</button></a>
 
 
 </body>
